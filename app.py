@@ -370,12 +370,9 @@ def main():
 
     with st.sidebar:
         st.header("Configuration")
--        server_label = st.selectbox("Région API", list(DUST_SERVERS.keys()), index=0)
--        base_url = DUST_SERVERS[server_label]
-+        server_label = "US (us-central1)"
-+        base_url = DUST_SERVERS.get(server_label, list(DUST_SERVERS.values())[0])
- 
-        w_id = st.text_input("Workspace ID", value=DEFAULT_WORKSPACE_ID)
+        server_label = "US (us-central1)"
+        base_url = DUST_SERVERS.get(server_label, list(DUST_SERVERS.values())[0])
+        w_id = st.text_input("ID du workspace", value=DEFAULT_WORKSPACE_ID)
 
         api_key_default = "sk-015efa3661161ddfa14636111843610d"
         if "api_key" not in st.session_state:
