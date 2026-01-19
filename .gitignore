@@ -1,0 +1,19 @@
+# Python cache and bytecode
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE/OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Streamlit secrets (do NOT commit)
+.streamlit/
